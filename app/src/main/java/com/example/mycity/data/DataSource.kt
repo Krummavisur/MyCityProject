@@ -5,6 +5,12 @@ import com.example.mycity.model.CategoryInfo
 import com.example.mycity.model.PlaceInfo
 
 object DataSource {
+    val defaultCategory = getCategoryData()[0]
+
+fun getPlaces(categoryIndex: Int): CategoryInfo {
+    return getCategoryData()[categoryIndex]
+}
+
     fun getCategoryData(): List<CategoryInfo> {
         return listOf(
             CategoryInfo(
@@ -14,6 +20,30 @@ object DataSource {
                     details = R.string.blackberry_details,
                     image = R.drawable.bb
                     ),
+                    PlaceInfo(
+                        name = R.string.tvoya_chashka,
+                        details = R.string.chaska_details,
+                        image = R.drawable.i
+                    ),
+                    PlaceInfo(
+                        name = R.string.coffee_people,
+                        details = R.string.coffee_people_details,
+                        image = R.drawable.cf
+                    ),
+                    PlaceInfo(
+                        name = R.string.garage,
+                        details = R.string.garage_description,
+                        image = R.drawable.s
+                    )
+                )
+            ),
+            CategoryInfo(
+                title = R.string.coffee_category,
+                places = listOf( PlaceInfo(
+                    name = R.string.blackberry,
+                    details = R.string.blackberry_details,
+                    image = R.drawable.bb
+                ),
                     PlaceInfo(
                         name = R.string.tvoya_chashka,
                         details = R.string.chaska_details,
